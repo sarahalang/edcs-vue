@@ -9,11 +9,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "aws --region eu-west-3 --profile hainzmann s3 sync ./dist s3://hainzmann-edcs-transformation --delete"
   },
   "main": "index.html ",
   "dependencies": {
     "@vue/cli": "^4.5.7",
+    "aws": "^0.0.3-2",
+    "aws-cli": "^0.0.2",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
